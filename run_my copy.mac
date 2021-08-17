@@ -1,0 +1,22 @@
+# Macro file for example B5
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#/run/numberOfThreads 4
+#
+# Initialize kernel
+/run/initialize
+
+/B5/field/value 1. tesla
+/B5/generator/momentum 2. GeV
+/B5/generator/sigmaMomentum 4. GeV 
+/B5/generator/sigmaAngle 0.
+/B5/generator/sigmaAngle 20. deg
+/run/beamOn 1000
+/B5/generator/sigmaAngle 10. deg
+
+/B5/field/value 0. tesla
+/B5/generator/sigmaAngle 10. deg
+/run/beamOn 1

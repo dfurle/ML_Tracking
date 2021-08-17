@@ -1,0 +1,1133 @@
+
+        ############################################
+        !!! WARNING - FPE detection is activated !!!
+        ############################################
+
+**************************************************************
+ Geant4 version Name: geant4-10-06-patch-03    (6-November-2020)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+<<< Geant4 Physics List simulation engine: FTFP_BERT
+
+Using Root
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+OpenGLImmediateXm (OGLIXm, OGLI)
+OpenGLStoredXm (OGLSXm, OGL, OGLS)
+OpenGLImmediateX (OGLIX, OGLIXm_FALLBACK)
+OpenGLStoredX (OGLSX, OGLSXm_FALLBACK)
+RayTracerX (RayTracerX)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+
+The materials defined are : 
+
+
+***** Table : Nb of materials = 5 *****
+
+ Material:   G4_AIR    density:  1.205 mg/cm3  RadL: 303.921 m    Nucl.Int.Length: 710.095 m  
+                       Imean:  85.700 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:   0.01 %  ElmAbundance   0.02 % 
+
+   --->  Element: N (N)   Z =  7.0   N =    14   A = 14.007 g/mole
+         --->  Isotope:   N14   Z =  7   N =  14   A =  14.00 g/mole   abundance: 99.632 %
+         --->  Isotope:   N15   Z =  7   N =  15   A =  15.00 g/mole   abundance:  0.368 %
+          ElmMassFraction:  75.53 %  ElmAbundance  78.44 % 
+
+   --->  Element: O (O)   Z =  8.0   N =    16   A = 15.999 g/mole
+         --->  Isotope:   O16   Z =  8   N =  16   A =  15.99 g/mole   abundance: 99.757 %
+         --->  Isotope:   O17   Z =  8   N =  17   A =  17.00 g/mole   abundance:  0.038 %
+         --->  Isotope:   O18   Z =  8   N =  18   A =  18.00 g/mole   abundance:  0.205 %
+          ElmMassFraction:  23.18 %  ElmAbundance  21.07 % 
+
+   --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
+         --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
+         --->  Isotope:  Ar38   Z = 18   N =  38   A =  37.96 g/mole   abundance:  0.063 %
+         --->  Isotope:  Ar40   Z = 18   N =  40   A =  39.96 g/mole   abundance: 99.600 %
+          ElmMassFraction:   1.28 %  ElmAbundance   0.47 % 
+
+
+ Material:    G4_Ar    density:  1.662 mg/cm3  RadL: 117.621 m    Nucl.Int.Length: 719.888 m  
+                       Imean: 188.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Ar (Ar)   Z = 18.0   N =    40   A = 39.948 g/mole
+         --->  Isotope:  Ar36   Z = 18   N =  36   A =  35.97 g/mole   abundance:  0.337 %
+         --->  Isotope:  Ar38   Z = 18   N =  38   A =  37.96 g/mole   abundance:  0.063 %
+         --->  Isotope:  Ar40   Z = 18   N =  40   A =  39.96 g/mole   abundance: 99.600 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+ Material: G4_PLASTIC_SC_VINYLTOLUENE    density:  1.032 g/cm3   RadL:  42.544 cm   Nucl.Int.Length:  69.969 cm 
+                       Imean:  64.700 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: C (C)   Z =  6.0   N =    12   A = 12.011 g/mole
+         --->  Isotope:   C12   Z =  6   N =  12   A =  12.00 g/mole   abundance: 98.930 %
+         --->  Isotope:   C13   Z =  6   N =  13   A =  13.00 g/mole   abundance:  1.070 %
+          ElmMassFraction:  91.47 %  ElmAbundance  47.37 % 
+
+   --->  Element: H (H)   Z =  1.0   N =     1   A =  1.008 g/mole
+         --->  Isotope:    H1   Z =  1   N =   1   A =   1.01 g/mole   abundance: 99.989 %
+         --->  Isotope:    H2   Z =  1   N =   2   A =   2.01 g/mole   abundance:  0.011 %
+          ElmMassFraction:   8.53 %  ElmAbundance  52.63 % 
+
+
+ Material: G4_CESIUM_IODIDE    density:  4.510 g/cm3   RadL:   1.860 cm   Nucl.Int.Length:  39.306 cm 
+                       Imean: 553.100 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Cs (Cs)   Z = 55.0   N =   133   A = 132.905 g/mole
+         --->  Isotope: Cs133   Z = 55   N = 133   A = 132.91 g/mole   abundance: 100.000 %
+          ElmMassFraction:  51.15 %  ElmAbundance  50.00 % 
+
+   --->  Element: I (I)   Z = 53.0   N =   127   A = 126.904 g/mole
+         --->  Isotope:  I127   Z = 53   N = 127   A = 126.90 g/mole   abundance: 100.000 %
+          ElmMassFraction:  48.85 %  ElmAbundance  50.00 % 
+
+
+ Material:    G4_Pb    density: 11.350 g/cm3   RadL:   5.613 mm   Nucl.Int.Length:  18.248 cm 
+                       Imean: 823.000 eV   temperature: 293.15 K  pressure:   1.00 atm
+
+   --->  Element: Pb (Pb)   Z = 82.0   N =   207   A = 207.217 g/mole
+         --->  Isotope: Pb204   Z = 82   N = 204   A = 203.97 g/mole   abundance:  1.400 %
+         --->  Isotope: Pb206   Z = 82   N = 206   A = 205.97 g/mole   abundance: 24.100 %
+         --->  Isotope: Pb207   Z = 82   N = 207   A = 206.98 g/mole   abundance: 22.100 %
+         --->  Isotope: Pb208   Z = 82   N = 208   A = 207.98 g/mole   abundance: 52.400 %
+          ElmMassFraction: 100.00 %  ElmAbundance 100.00 % 
+
+
+
+Checking overlaps for volume magneticPhysical (G4Tubs) ... OK! 
+Checking overlaps for volume firstArmPhysical (G4Box) ... OK! 
+Checking overlaps for volume fSecondArmPhys (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber1Physical (G4Box) ... OK! 
+Checking overlaps for volume wirePlane1Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume hodoscope2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume chamber2Physical (G4Box) ... OK! 
+Checking overlaps for volume wirePlane2Physical (G4Box) ... OK! 
+Checking overlaps for volume EMcalorimeterPhysical (G4Box) ... OK! 
+Checking overlaps for volume HadCalorimeterPhysical (G4Box) ... OK! 
+Checking overlaps for volume HadCalScintiPhysical (G4Box) ... OK! 
+
+ FTFP_BERT : new threshold between BERT and FTFP is over the interval 
+ for pions :   3 to 6 GeV
+ for kaons :   3 to 6 GeV
+ for proton :  3 to 6 GeV
+ for neutron : 3 to 6 GeV
+
+### Adding tracking cuts for neutron  TimeCut(ns)= 10000  KinEnergyCut(MeV)= 0
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 63 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e-, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      RangeFactor= 0.04, stepLimType: 1, latDisp: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+
+eIoni:  for e+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+, integral:1  SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001 from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+
+ionIoni:  for GenericIon  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      Stopping Power data for 17 ion/material pairs
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+ionIoni:  for alpha  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for anti_proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for anti_proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001 from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for kaon+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for kaon+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001 from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for kaon-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for kaon-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001 from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+muIoni:  for mu+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV
+
+muPairProd:  for mu+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001 from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0, polarAngLim(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+muIoni:  for mu-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV
+
+muPairProd:  for mu-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001 from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for pi+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for pi+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001 from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      RangeFactor= 0.2, stepLimType: 0, latDisp: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+
+hIoni:  for pi-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV
+
+hPairProd:  for pi-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001 from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180 pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+
+---------------------------------------------------
+                           Hadronic Processes for neutron
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+
+  Process: neutronInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:      G4NeutronInelasticXS: 0 eV  ---> 100 TeV
+
+  Process: nCapture
+        Model:               nRadCapture: 0 eV  ---> 100 TeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+
+  Process: nKiller
+
+---------------------------------------------------
+                           Hadronic Processes for GenericIon
+
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_neutron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_proton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 25.6 PeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+---------------------------------------------------
+                           Hadronic Processes for e+
+
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e-
+
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for gamma
+
+  Process: photonNuclear
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            PhotoNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: kaon+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: kaon-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+  Process: lambdaInelastic
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu+
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu-
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+  Process: muMinusCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for pi+
+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: pi+Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi-
+
+  Process: hadElastic
+        Model:           hElasticGlauber: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: pi-Inelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for proton
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+  Process: protonInelastic
+        Model:                      FTFP: 3 GeV ---> 100 TeV
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+     Cr_sctns:  BarashenkovGlauberGribov: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 6 GeV/n
+        Model:                      FTFP: 3 GeV/n ---> 100 TeV/n
+     Cr_sctns:  Glauber-Gribov Nucl-nucl: 0 eV  ---> 25.6 PeV
+
+================================================================
+=======================================================================
+======       Pre-compound/De-excitation Physics Parameters     ========
+=======================================================================
+Type of pre-compound inverse x-section              3
+Pre-compound model active                           1
+Pre-compound excitation low energy (MeV)            0.1
+Pre-compound excitation high energy (MeV)           30
+Type of de-excitation inverse x-section             3
+Type of de-excitation factory                       Evaporation+GEM
+Number of de-excitation channels                    68
+Min excitation energy (keV)                         0.01
+Min energy per nucleon for multifragmentation (MeV) 2e+05
+Limit excitation energy for Fermi BreakUp (MeV)     20
+Level density (1/MeV)                               0.075
+Use simple level density model                      1
+Use discrete excitation energy of the residual      0
+Time limit for long lived isomeres (ns)             1000
+Internal e- conversion flag                         1
+Store e- internal conversion data                   0
+Electron internal conversion ID                     2
+Correlated gamma emission flag                      0
+Max 2J for sampling of angular correlations         10
+Upload data before 1st event for                Z < 9
+=======================================================================
+G4VisManager: Using G4TrajectoryDrawByCharge as fallback trajectory model.
+See commands in /vis/modeling/trajectories/ for other options.
+### Run 0 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : proton (-0,0,100000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 4.9870028523976 (nsec)
+Hodoscope 2 has 3 hits.
+  Hodoscope[9] 43.187937103889 (nsec)
+  Hodoscope[10] 1419.6812158585 (nsec)
+  Hodoscope[15] 1628.7201376329 (nsec)
+Drift Chamber 1 has 7 hits.
+  Layer[0] : time 6.6712421465156 (nsec) --- local (x,y) 0.0068976087488375, -0.001060304538742
+  Layer[0] : time 9.3124685854255 (nsec) --- local (x,y) 11.338057615946, -192.32293265863
+  Layer[0] : time 10.12822655005 (nsec) --- local (x,y) -32.407565787467, -165.38793863646
+  Layer[1] : time 8.3391360803921 (nsec) --- local (x,y) 0.013210911787839, -0.0046929086614397
+  Layer[2] : time 10.007030014525 (nsec) --- local (x,y) 0.017790490821106, -0.0035138351901322
+  Layer[3] : time 11.674923948876 (nsec) --- local (x,y) 0.023425005836559, -0.0011390087980778
+  Layer[4] : time 13.342817883344 (nsec) --- local (x,y) 0.028071293571896, 0.0008951461009665
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 34.850339499084 (nsec) --- local (x,y) -147.40696878226, 0.047300058763943
+  Layer[1] : time 36.521133507245 (nsec) --- local (x,y) -176.9050541531, 0.053707283972597
+  Layer[2] : time 38.191927700839 (nsec) --- local (x,y) -206.40408252011, 0.060251975739992
+  Layer[3] : time 39.862722101185 (nsec) --- local (x,y) -235.90416191435, 0.069550578156142
+  Layer[4] : time 41.533516723828 (nsec) --- local (x,y) -265.4053723571, 0.077470538676864
+EM Calorimeter has 66 hits. Total Edep is 1099.3184581149 (MeV)
+Hadron Calorimeter has 17 hits. Total Edep is 3949.3101993602 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 1 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : pi+ (-0,0,100000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 4.9867880839839 (nsec)
+Hodoscope 2 has 1 hits.
+  Hodoscope[10] 42.693393245574 (nsec)
+Drift Chamber 1 has 5 hits.
+  Layer[0] : time 6.6709548433254 (nsec) --- local (x,y) -0.013824155103387, 0.016261017805376
+  Layer[1] : time 8.3387769461329 (nsec) --- local (x,y) -0.029846802908484, 0.024708571280227
+  Layer[2] : time 10.006599048757 (nsec) --- local (x,y) -0.045364841809758, 0.03027822925463
+  Layer[3] : time 11.674421151582 (nsec) --- local (x,y) -0.062745747735793, 0.035672637674813
+  Layer[4] : time 13.342243254523 (nsec) --- local (x,y) -0.081219924189956, 0.040543047254242
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 34.366098870958 (nsec) --- local (x,y) -82.69418795148, 0.021504706336471
+  Layer[1] : time 36.03482840894 (nsec) --- local (x,y) -99.190132699387, 0.013029420450852
+  Layer[2] : time 37.703557930862 (nsec) --- local (x,y) -115.68593028817, 0.0026139701892234
+  Layer[3] : time 39.372287520732 (nsec) --- local (x,y) -132.18234540633, -0.0081844793609152
+  Layer[4] : time 41.041017145779 (nsec) --- local (x,y) -148.67907932232, -0.020372551808973
+EM Calorimeter has 2 hits. Total Edep is 187.3346008861 (MeV)
+Hadron Calorimeter has 3 hits. Total Edep is 54.023046348755 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 2 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : e+ (0,0,100000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 4.9867832233946 (nsec)
+Hodoscope 2 has 2 hits.
+  Hodoscope[8] 43.19738346854 (nsec)
+  Hodoscope[18] 58.096897387322 (nsec)
+Drift Chamber 1 has 5 hits.
+  Layer[0] : time 6.6709483415296 (nsec) --- local (x,y) 0.0019844168474463, 0.015349347593451
+  Layer[1] : time 8.3387688192741 (nsec) --- local (x,y) -0.0066863673731819, 0.036561134376806
+  Layer[2] : time 10.006589297061 (nsec) --- local (x,y) -0.016468249766321, 0.057586358001602
+  Layer[3] : time 11.674409774888 (nsec) --- local (x,y) -0.022883666512176, 0.080037150346134
+  Layer[4] : time 13.342230252564 (nsec) --- local (x,y) -0.027086964574016, 0.10207059947303
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 34.846758094365 (nsec) --- local (x,y) -204.84181039991, 0.3194607488942
+  Layer[1] : time 36.520163062012 (nsec) --- local (x,y) -245.79289361478, 0.33251044163691
+  Layer[2] : time 38.193567974244 (nsec) --- local (x,y) -286.74377307783, 0.3462542365349
+  Layer[3] : time 39.866972960567 (nsec) --- local (x,y) -327.69492473665, 0.35974704663616
+  Layer[4] : time 41.540378018051 (nsec) --- local (x,y) -368.64633766804, 0.37347086767368
+EM Calorimeter has 43 hits. Total Edep is 81951.537358137 (MeV)
+Hadron Calorimeter has 7 hits. Total Edep is 107.62415351717 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 3 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : proton (0,0,10000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 5.0086957694034 (nsec)
+Hodoscope 2 has 1 hits.
+  Hodoscope[9] 43.375725555795 (nsec)
+Drift Chamber 1 has 5 hits.
+  Layer[0] : time 6.7002661311666 (nsec) --- local (x,y) 0.033096018686219, 0.18688843051518
+  Layer[1] : time 8.3754201430863 (nsec) --- local (x,y) 0.017229260134009, 0.32597705161014
+  Layer[2] : time 10.050574356619 (nsec) --- local (x,y) -0.012687801668717, 0.49414309367773
+  Layer[3] : time 11.725728747225 (nsec) --- local (x,y) -0.042267835180755, 0.68990964282135
+  Layer[4] : time 13.400883246472 (nsec) --- local (x,y) -0.099042450724786, 0.89032528331098
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 35.001759052462 (nsec) --- local (x,y) -147.72932964196, 2.7693915162349
+  Layer[1] : time 36.679842320631 (nsec) --- local (x,y) -177.30009611045, 2.8980292304352
+  Layer[2] : time 38.357925737346 (nsec) --- local (x,y) -206.87092874702, 3.0195033049359
+  Layer[3] : time 40.036006426087 (nsec) --- local (x,y) -236.42739495793, 3.1252078158502
+  Layer[4] : time 41.714088769682 (nsec) --- local (x,y) -265.99159563292, 3.230712982871
+EM Calorimeter has 11 hits. Total Edep is 197.93877510079 (MeV)
+Hadron Calorimeter has 9 hits. Total Edep is 496.98796370241 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 4 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : pi+ (0,0,10000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 4.9872691847405 (nsec)
+Hodoscope 2 has 1 hits.
+  Hodoscope[10] 42.69678951869 (nsec)
+Drift Chamber 1 has 6 hits.
+  Layer[0] : time 6.6715985048034 (nsec) --- local (x,y) -0.12165987980389, -0.056105043382324
+  Layer[0] : time 8.0005090334058 (nsec) --- local (x,y) 120.55872976003, 285.88413428493
+  Layer[1] : time 8.33958160666 (nsec) --- local (x,y) -0.11564672121573, -0.12090528601761
+  Layer[2] : time 10.007564715945 (nsec) --- local (x,y) -0.10319680769892, -0.19296060709233
+  Layer[3] : time 11.675547817511 (nsec) --- local (x,y) -0.082674415844142, -0.22803756688892
+  Layer[4] : time 13.343530919352 (nsec) --- local (x,y) -0.087043593714109, -0.25942991802217
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 34.368422995785 (nsec) --- local (x,y) -85.188771314839, -2.166599489153
+  Layer[1] : time 36.037369058675 (nsec) --- local (x,y) -102.17769868844, -2.333427941274
+  Layer[2] : time 37.706314188655 (nsec) --- local (x,y) -119.158211758, -2.5104789091031
+  Layer[3] : time 39.375258173497 (nsec) --- local (x,y) -136.12845485189, -2.7001912197703
+  Layer[4] : time 41.044202184471 (nsec) --- local (x,y) -153.09890670939, -2.8883861726581
+EM Calorimeter has 25 hits. Total Edep is 339.83915317331 (MeV)
+Hadron Calorimeter has 12 hits. Total Edep is 450.62866939929 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 5 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : e+ (-0,0,10000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 4.9867832329839 (nsec)
+Hodoscope 2 has 1 hits.
+  Hodoscope[9] 43.185447220732 (nsec)
+Drift Chamber 1 has 5 hits.
+  Layer[0] : time 6.6709483781198 (nsec) --- local (x,y) -0.047105113869766, -0.16615331494088
+  Layer[1] : time 8.3387688792533 (nsec) --- local (x,y) -0.075279427161224, -0.24812704045366
+  Layer[2] : time 10.006589374572 (nsec) --- local (x,y) -0.060844784922981, -0.32229016250226
+  Layer[3] : time 11.674409864122 (nsec) --- local (x,y) -0.046214076277897, -0.38382815602724
+  Layer[4] : time 13.34223034322 (nsec) --- local (x,y) -0.030322974254476, -0.40820658149983
+Drift Chamber 2 has 6 hits.
+  Layer[0] : time 34.848114703369 (nsec) --- local (x,y) -148.31318103128, -0.90212303575631
+  Layer[1] : time 36.518850971446 (nsec) --- local (x,y) -177.8918283954, -0.90118168933449
+  Layer[2] : time 38.189591731055 (nsec) --- local (x,y) -207.49326349267, -0.92081080853881
+  Layer[2] : time 38.865768347815 (nsec) --- local (x,y) -299.72284120283, 297.21410520337
+  Layer[3] : time 39.860333948355 (nsec) --- local (x,y) -237.1021000025, -0.92494224337508
+  Layer[4] : time 41.531078512462 (nsec) --- local (x,y) -266.72283497797, -0.93355706684421
+EM Calorimeter has 16 hits. Total Edep is 9346.9047836905 (MeV)
+Hadron Calorimeter has 3 hits. Total Edep is 4.7559338815055 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 6 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : proton (-0,0,1000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 6.8393443260594 (nsec)
+Hodoscope 2 has 1 hits.
+  Hodoscope[9] 59.461934532587 (nsec)
+Drift Chamber 1 has 5 hits.
+  Layer[0] : time 9.1539226930808 (nsec) --- local (x,y) 3.7941832893092, -3.3046129880656
+  Layer[1] : time 11.446356701797 (nsec) --- local (x,y) 6.2152576396404, -4.120839170803
+  Layer[2] : time 13.73897007013 (nsec) --- local (x,y) 8.4634149125125, -4.8344042451751
+  Layer[3] : time 16.03177732119 (nsec) --- local (x,y) 10.832439792182, -5.4900866309642
+  Layer[4] : time 18.324780045602 (nsec) --- local (x,y) 13.031610489928, -5.8262987810453
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 47.977986468955 (nsec) --- local (x,y) -132.02167305001, -1.6004997539444
+  Layer[1] : time 50.278879199713 (nsec) --- local (x,y) -164.31761587692, -0.81843279604321
+  Layer[2] : time 52.579896918515 (nsec) --- local (x,y) -196.31369664739, -0.046196593702274
+  Layer[3] : time 54.881127434088 (nsec) --- local (x,y) -228.25549557235, 0.43092340145607
+  Layer[4] : time 57.18264852484 (nsec) --- local (x,y) -260.48106487009, 0.88547993048567
+EM Calorimeter has 3 hits. Total Edep is 302.29308252001 (MeV)
+Hadron Calorimeter has 0 hits. Total Edep is 0 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 7 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : pi+ (-0,0,1000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 5.0351610299737 (nsec)
+Hodoscope 2 has 2 hits.
+  Hodoscope[10] 43.113804479999 (nsec)
+  Hodoscope[8] 44.914536037536 (nsec)
+Drift Chamber 1 has 26 hits.
+  Layer[0] : time 6.7357325906443 (nsec) --- local (x,y) 0.0046331466493768, 0.042311217633998
+  Layer[1] : time 8.4198030583037 (nsec) --- local (x,y) -0.084042105602844, 0.69877484516187
+  Layer[2] : time 10.103876848009 (nsec) --- local (x,y) -0.058035312424322, 1.4643850730454
+  Layer[3] : time 11.787952906118 (nsec) --- local (x,y) -0.15021466668723, 2.1821619534719
+  Layer[3] : time 11.87121998464 (nsec) --- local (x,y) -5.8275620878167, 1.6906287258829
+  Layer[3] : time 11.872661103922 (nsec) --- local (x,y) -5.8747153512203, 1.7135940865053
+  Layer[3] : time 11.874058356382 (nsec) --- local (x,y) -5.9324737539357, 1.7253560727912
+  Layer[3] : time 11.875524441588 (nsec) --- local (x,y) -5.9881180816636, 1.7392082650796
+  Layer[3] : time 11.883657946125 (nsec) --- local (x,y) -6.2069218428111, 1.7341721747932
+  Layer[3] : time 11.884454483964 (nsec) --- local (x,y) -6.1810030916114, 1.7147178251818
+  Layer[3] : time 11.885260799758 (nsec) --- local (x,y) -6.1640089063813, 1.6922129839034
+  Layer[3] : time 11.886060764419 (nsec) --- local (x,y) -6.1461759807805, 1.6758685814326
+  Layer[3] : time 11.886874342306 (nsec) --- local (x,y) -6.1336724739439, 1.6706000883796
+  Layer[3] : time 11.888072725762 (nsec) --- local (x,y) -6.123316403804, 1.6404183128435
+  Layer[3] : time 11.888937663997 (nsec) --- local (x,y) -6.0912904074639, 1.6280129614526
+  Layer[3] : time 11.889817650181 (nsec) --- local (x,y) -6.0617546220266, 1.621147766186
+  Layer[3] : time 11.890675950937 (nsec) --- local (x,y) -6.0291100767991, 1.6271828375848
+  Layer[3] : time 11.891527370142 (nsec) --- local (x,y) -5.9984410969114, 1.6295700828891
+  Layer[3] : time 11.901768404954 (nsec) --- local (x,y) -5.7483480978487, 1.6152413959502
+  Layer[3] : time 11.902216308784 (nsec) --- local (x,y) -5.741363943672, 1.6086024596973
+  Layer[3] : time 11.902667044647 (nsec) --- local (x,y) -5.7400503107028, 1.5993497703511
+  Layer[3] : time 11.903117780509 (nsec) --- local (x,y) -5.7376992549757, 1.5902290759823
+  Layer[3] : time 11.90358740036 (nsec) --- local (x,y) -5.7347735887998, 1.5904664185501
+  Layer[3] : time 11.904265967443 (nsec) --- local (x,y) -5.7265794880753, 1.5844234488651
+  Layer[3] : time 11.905140036223 (nsec) --- local (x,y) -5.7045798052809, 1.5927210147308
+  Layer[4] : time 13.472031501621 (nsec) --- local (x,y) -0.091129934710419, 2.6932173487101
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 34.704313126692 (nsec) --- local (x,y) -87.95892010678, 6.9380204783481
+  Layer[1] : time 36.389528485105 (nsec) --- local (x,y) -106.02042126878, 7.2685948029438
+  Layer[2] : time 38.074738084679 (nsec) --- local (x,y) -124.00924392296, 7.629837385512
+  Layer[3] : time 39.759920027178 (nsec) --- local (x,y) -141.74377801888, 7.5447210982131
+  Layer[4] : time 41.4451104607 (nsec) --- local (x,y) -159.50759549486, 7.1887560039802
+EM Calorimeter has 2 hits. Total Edep is 167.04622210304 (MeV)
+Hadron Calorimeter has 1 hits. Total Edep is 24.334984119735 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+### Run 8 starts.
+... open Root analysis file : B5.root - done
+--> Event 0 starts.
+
+>>> Event 0 >>> Simulation truth : e+ (0,0,1000)
+Hodoscope 1 has 1 hits.
+  Hodoscope[7] 4.9867894836812 (nsec)
+Hodoscope 2 has 1 hits.
+  Hodoscope[9] 43.214554722763 (nsec)
+Drift Chamber 1 has 6 hits.
+  Layer[0] : time 6.6709740854852 (nsec) --- local (x,y) 0.75139813256988, -0.60177074791516
+  Layer[0] : time 7.2744084079382 (nsec) --- local (x,y) -93.302569246477, -21.032846065005
+  Layer[1] : time 8.338812034741 (nsec) --- local (x,y) 1.7207540265746, -2.672336758327
+  Layer[2] : time 10.006646178304 (nsec) --- local (x,y) 2.8652096924268, -4.3300748556807
+  Layer[3] : time 11.674476600816 (nsec) --- local (x,y) 3.8719016426619, -5.7320750254706
+  Layer[4] : time 13.342309426357 (nsec) --- local (x,y) 4.8650098034467, -7.3790681319508
+Drift Chamber 2 has 5 hits.
+  Layer[0] : time 34.872663400216 (nsec) --- local (x,y) -156.86768016729, -26.150638511157
+  Layer[1] : time 36.544392373992 (nsec) --- local (x,y) -191.10485395828, -27.110850851168
+  Layer[2] : time 38.216011499467 (nsec) --- local (x,y) -224.85609142266, -28.07954021577
+  Layer[3] : time 39.887627211341 (nsec) --- local (x,y) -258.60053095112, -28.702414800857
+  Layer[4] : time 41.559261595824 (nsec) --- local (x,y) -292.42529949164, -29.454527507421
+EM Calorimeter has 7 hits. Total Edep is 941.22386557475 (MeV)
+Hadron Calorimeter has 0 hits. Total Edep is 0 (MeV)
+... write Root file : B5.root - done
+... close Root file : B5.root - done
+Graphics systems deleted.
+Visualization Manager deleting...

@@ -1,0 +1,632 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.22/06                        https://root.cern |
+  | (c) 1995-2020, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for macosx64 on Jan 23 2021, 01:24:00                      |
+  | From tag , 27 November 2020                                      |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+
+Processing TMVA_RNN_Classification.C...
+Running with nthreads  = 8
+--- RNNClassification  : Using input file: time_data_t10_d30.root
+DataSetInfo              : [dataset] : Added class "Signal"
+                         : Add Tree sgn of type Signal with 10000 events
+DataSetInfo              : [dataset] : Added class "Background"
+                         : Add Tree bkg of type Background with 10000 events
+number of variables is 300
+vars_time0[0],vars_time0[1],vars_time0[2],vars_time0[3],vars_time0[4],vars_time0[5],vars_time0[6],vars_time0[7],vars_time0[8],vars_time0[9],vars_time0[10],vars_time0[11],vars_time0[12],vars_time0[13],vars_time0[14],vars_time0[15],vars_time0[16],vars_time0[17],vars_time0[18],vars_time0[19],vars_time0[20],vars_time0[21],vars_time0[22],vars_time0[23],vars_time0[24],vars_time0[25],vars_time0[26],vars_time0[27],vars_time0[28],vars_time0[29],vars_time1[0],vars_time1[1],vars_time1[2],vars_time1[3],vars_time1[4],vars_time1[5],vars_time1[6],vars_time1[7],vars_time1[8],vars_time1[9],vars_time1[10],vars_time1[11],vars_time1[12],vars_time1[13],vars_time1[14],vars_time1[15],vars_time1[16],vars_time1[17],vars_time1[18],vars_time1[19],vars_time1[20],vars_time1[21],vars_time1[22],vars_time1[23],vars_time1[24],vars_time1[25],vars_time1[26],vars_time1[27],vars_time1[28],vars_time1[29],vars_time2[0],vars_time2[1],vars_time2[2],vars_time2[3],vars_time2[4],vars_time2[5],vars_time2[6],vars_time2[7],vars_time2[8],vars_time2[9],vars_time2[10],vars_time2[11],vars_time2[12],vars_time2[13],vars_time2[14],vars_time2[15],vars_time2[16],vars_time2[17],vars_time2[18],vars_time2[19],vars_time2[20],vars_time2[21],vars_time2[22],vars_time2[23],vars_time2[24],vars_time2[25],vars_time2[26],vars_time2[27],vars_time2[28],vars_time2[29],vars_time3[0],vars_time3[1],vars_time3[2],vars_time3[3],vars_time3[4],vars_time3[5],vars_time3[6],vars_time3[7],vars_time3[8],vars_time3[9],vars_time3[10],vars_time3[11],vars_time3[12],vars_time3[13],vars_time3[14],vars_time3[15],vars_time3[16],vars_time3[17],vars_time3[18],vars_time3[19],vars_time3[20],vars_time3[21],vars_time3[22],vars_time3[23],vars_time3[24],vars_time3[25],vars_time3[26],vars_time3[27],vars_time3[28],vars_time3[29],vars_time4[0],vars_time4[1],vars_time4[2],vars_time4[3],vars_time4[4],vars_time4[5],vars_time4[6],vars_time4[7],vars_time4[8],vars_time4[9],vars_time4[10],vars_time4[11],vars_time4[12],vars_time4[13],vars_time4[14],vars_time4[15],vars_time4[16],vars_time4[17],vars_time4[18],vars_time4[19],vars_time4[20],vars_time4[21],vars_time4[22],vars_time4[23],vars_time4[24],vars_time4[25],vars_time4[26],vars_time4[27],vars_time4[28],vars_time4[29],vars_time5[0],vars_time5[1],vars_time5[2],vars_time5[3],vars_time5[4],vars_time5[5],vars_time5[6],vars_time5[7],vars_time5[8],vars_time5[9],vars_time5[10],vars_time5[11],vars_time5[12],vars_time5[13],vars_time5[14],vars_time5[15],vars_time5[16],vars_time5[17],vars_time5[18],vars_time5[19],vars_time5[20],vars_time5[21],vars_time5[22],vars_time5[23],vars_time5[24],vars_time5[25],vars_time5[26],vars_time5[27],vars_time5[28],vars_time5[29],vars_time6[0],vars_time6[1],vars_time6[2],vars_time6[3],vars_time6[4],vars_time6[5],vars_time6[6],vars_time6[7],vars_time6[8],vars_time6[9],vars_time6[10],vars_time6[11],vars_time6[12],vars_time6[13],vars_time6[14],vars_time6[15],vars_time6[16],vars_time6[17],vars_time6[18],vars_time6[19],vars_time6[20],vars_time6[21],vars_time6[22],vars_time6[23],vars_time6[24],vars_time6[25],vars_time6[26],vars_time6[27],vars_time6[28],vars_time6[29],vars_time7[0],vars_time7[1],vars_time7[2],vars_time7[3],vars_time7[4],vars_time7[5],vars_time7[6],vars_time7[7],vars_time7[8],vars_time7[9],vars_time7[10],vars_time7[11],vars_time7[12],vars_time7[13],vars_time7[14],vars_time7[15],vars_time7[16],vars_time7[17],vars_time7[18],vars_time7[19],vars_time7[20],vars_time7[21],vars_time7[22],vars_time7[23],vars_time7[24],vars_time7[25],vars_time7[26],vars_time7[27],vars_time7[28],vars_time7[29],vars_time8[0],vars_time8[1],vars_time8[2],vars_time8[3],vars_time8[4],vars_time8[5],vars_time8[6],vars_time8[7],vars_time8[8],vars_time8[9],vars_time8[10],vars_time8[11],vars_time8[12],vars_time8[13],vars_time8[14],vars_time8[15],vars_time8[16],vars_time8[17],vars_time8[18],vars_time8[19],vars_time8[20],vars_time8[21],vars_time8[22],vars_time8[23],vars_time8[24],vars_time8[25],vars_time8[26],vars_time8[27],vars_time8[28],vars_time8[29],vars_time9[0],vars_time9[1],vars_time9[2],vars_time9[3],vars_time9[4],vars_time9[5],vars_time9[6],vars_time9[7],vars_time9[8],vars_time9[9],vars_time9[10],vars_time9[11],vars_time9[12],vars_time9[13],vars_time9[14],vars_time9[15],vars_time9[16],vars_time9[17],vars_time9[18],vars_time9[19],vars_time9[20],vars_time9[21],vars_time9[22],vars_time9[23],vars_time9[24],vars_time9[25],vars_time9[26],vars_time9[27],vars_time9[28],vars_time9[29],
+prepared DATA LOADER 
+Factory                  : Booking method: [1mTMVA_LSTM[0m
+                         : 
+                         : Parsing option string: 
+                         : ... "!H:V:ErrorStrategy=CROSSENTROPY:VarTransform=None:WeightInitialization=XAVIERUNIFORM:ValidationSize=0.2:RandomSeed=1234:InputLayout=10|30:Layout=LSTM|10|30|10|0|1,RESHAPE|FLAT,DENSE|64|TANH,LINEAR:TrainingStrategy=LearningRate=1e-3,Momentum=0.0,Repetitions=1,ConvergenceSteps=5,BatchSize=100,TestRepetitions=1,WeightDecay=1e-2,Regularization=None,MaxEpochs=20,Optimizer=ADAM,DropConfig=0.0+0.+0.+0.:Architecture=CPU"
+                         : The following options are set:
+                         : - By User:
+                         :     <none>
+                         : - Default:
+                         :     Boost_num: "0" [Number of times the classifier will be boosted]
+                         : Parsing option string: 
+                         : ... "!H:V:ErrorStrategy=CROSSENTROPY:VarTransform=None:WeightInitialization=XAVIERUNIFORM:ValidationSize=0.2:RandomSeed=1234:InputLayout=10|30:Layout=LSTM|10|30|10|0|1,RESHAPE|FLAT,DENSE|64|TANH,LINEAR:TrainingStrategy=LearningRate=1e-3,Momentum=0.0,Repetitions=1,ConvergenceSteps=5,BatchSize=100,TestRepetitions=1,WeightDecay=1e-2,Regularization=None,MaxEpochs=20,Optimizer=ADAM,DropConfig=0.0+0.+0.+0.:Architecture=CPU"
+                         : The following options are set:
+                         : - By User:
+                         :     V: "True" [Verbose output (short form of "VerbosityLevel" below - overrides the latter one)]
+                         :     VarTransform: "None" [List of variable transformations performed before training, e.g., "D_Background,P_Signal,G,N_AllClasses" for: "Decorrelation, PCA-transformation, Gaussianisation, Normalisation, each for the given class of events ('AllClasses' denotes all events of all classes, if no class indication is given, 'All' is assumed)"]
+                         :     H: "False" [Print method-specific help message]
+                         :     InputLayout: "10|30" [The Layout of the input]
+                         :     Layout: "LSTM|10|30|10|0|1,RESHAPE|FLAT,DENSE|64|TANH,LINEAR" [Layout of the network.]
+                         :     ErrorStrategy: "CROSSENTROPY" [Loss function: Mean squared error (regression) or cross entropy (binary classification).]
+                         :     WeightInitialization: "XAVIERUNIFORM" [Weight initialization strategy]
+                         :     RandomSeed: "1234" [Random seed used for weight initialization and batch shuffling]
+                         :     ValidationSize: "0.2" [Part of the training data to use for validation. Specify as 0.2 or 20% to use a fifth of the data set as validation set. Specify as 100 to use exactly 100 events. (Default: 20%)]
+                         :     Architecture: "CPU" [Which architecture to perform the training on.]
+                         :     TrainingStrategy: "LearningRate=1e-3,Momentum=0.0,Repetitions=1,ConvergenceSteps=5,BatchSize=100,TestRepetitions=1,WeightDecay=1e-2,Regularization=None,MaxEpochs=20,Optimizer=ADAM,DropConfig=0.0+0.+0.+0." [Defines the training strategies.]
+                         : - Default:
+                         :     VerbosityLevel: "Default" [Verbosity level]
+                         :     CreateMVAPdfs: "False" [Create PDFs for classifier outputs (signal and background)]
+                         :     IgnoreNegWeightsInTraining: "False" [Events with negative weights are ignored in the training (but are included for testing and performance evaluation)]
+                         :     BatchLayout: "0|0|0" [The Layout of the batch]
+                         : Will now use the CPU architecture with BLAS and IMT support !
+Factory                  : Booking method: [1mTMVA_DNN[0m
+                         : 
+                         : Parsing option string: 
+                         : ... "!H:V:ErrorStrategy=CROSSENTROPY:VarTransform=None:WeightInitialization=XAVIER:RandomSeed=0:InputLayout=1|1|300:Layout=DENSE|64|TANH,DENSE|TANH|64,DENSE|TANH|64,LINEAR:TrainingStrategy=LearningRate=1e-3,Momentum=0.0,Repetitions=1,ConvergenceSteps=10,BatchSize=256,TestRepetitions=1,WeightDecay=1e-4,Regularization=None,MaxEpochs=20DropConfig=0.0+0.+0.+0.,Optimizer=ADAM:CPU"
+                         : The following options are set:
+                         : - By User:
+                         :     <none>
+                         : - Default:
+                         :     Boost_num: "0" [Number of times the classifier will be boosted]
+                         : Parsing option string: 
+                         : ... "!H:V:ErrorStrategy=CROSSENTROPY:VarTransform=None:WeightInitialization=XAVIER:RandomSeed=0:InputLayout=1|1|300:Layout=DENSE|64|TANH,DENSE|TANH|64,DENSE|TANH|64,LINEAR:TrainingStrategy=LearningRate=1e-3,Momentum=0.0,Repetitions=1,ConvergenceSteps=10,BatchSize=256,TestRepetitions=1,WeightDecay=1e-4,Regularization=None,MaxEpochs=20DropConfig=0.0+0.+0.+0.,Optimizer=ADAM:CPU"
+                         : The following options are set:
+                         : - By User:
+                         :     V: "True" [Verbose output (short form of "VerbosityLevel" below - overrides the latter one)]
+                         :     VarTransform: "None" [List of variable transformations performed before training, e.g., "D_Background,P_Signal,G,N_AllClasses" for: "Decorrelation, PCA-transformation, Gaussianisation, Normalisation, each for the given class of events ('AllClasses' denotes all events of all classes, if no class indication is given, 'All' is assumed)"]
+                         :     H: "False" [Print method-specific help message]
+                         :     InputLayout: "1|1|300" [The Layout of the input]
+                         :     Layout: "DENSE|64|TANH,DENSE|TANH|64,DENSE|TANH|64,LINEAR" [Layout of the network.]
+                         :     ErrorStrategy: "CROSSENTROPY" [Loss function: Mean squared error (regression) or cross entropy (binary classification).]
+                         :     WeightInitialization: "XAVIER" [Weight initialization strategy]
+                         :     RandomSeed: "0" [Random seed used for weight initialization and batch shuffling]
+                         :     Architecture: "CPU" [Which architecture to perform the training on.]
+                         :     TrainingStrategy: "LearningRate=1e-3,Momentum=0.0,Repetitions=1,ConvergenceSteps=10,BatchSize=256,TestRepetitions=1,WeightDecay=1e-4,Regularization=None,MaxEpochs=20DropConfig=0.0+0.+0.+0.,Optimizer=ADAM" [Defines the training strategies.]
+                         : - Default:
+                         :     VerbosityLevel: "Default" [Verbosity level]
+                         :     CreateMVAPdfs: "False" [Create PDFs for classifier outputs (signal and background)]
+                         :     IgnoreNegWeightsInTraining: "False" [Events with negative weights are ignored in the training (but are included for testing and performance evaluation)]
+                         :     BatchLayout: "0|0|0" [The Layout of the batch]
+                         :     ValidationSize: "20%" [Part of the training data to use for validation. Specify as 0.2 or 20% to use a fifth of the data set as validation set. Specify as 100 to use exactly 100 events. (Default: 20%)]
+                         : Will now use the CPU architecture with BLAS and IMT support !
+Factory                  : Booking method: [1mBDTG[0m
+                         : 
+                         : the option NegWeightTreatment=InverseBoostNegWeights does not exist for BoostType=Grad
+                         : --> change to new default NegWeightTreatment=Pray
+                         : Building event vectors for type 2 Signal
+                         : Dataset[dataset] :  create input formulas for tree sgn
+                         : Using variable vars_time0[0] from array expression vars_time0 of size 30
+                         : Using variable vars_time1[0] from array expression vars_time1 of size 30
+                         : Using variable vars_time2[0] from array expression vars_time2 of size 30
+                         : Using variable vars_time3[0] from array expression vars_time3 of size 30
+                         : Using variable vars_time4[0] from array expression vars_time4 of size 30
+                         : Using variable vars_time5[0] from array expression vars_time5 of size 30
+                         : Using variable vars_time6[0] from array expression vars_time6 of size 30
+                         : Using variable vars_time7[0] from array expression vars_time7 of size 30
+                         : Using variable vars_time8[0] from array expression vars_time8 of size 30
+                         : Using variable vars_time9[0] from array expression vars_time9 of size 30
+                         : Building event vectors for type 2 Background
+                         : Dataset[dataset] :  create input formulas for tree bkg
+                         : Using variable vars_time0[0] from array expression vars_time0 of size 30
+                         : Using variable vars_time1[0] from array expression vars_time1 of size 30
+                         : Using variable vars_time2[0] from array expression vars_time2 of size 30
+                         : Using variable vars_time3[0] from array expression vars_time3 of size 30
+                         : Using variable vars_time4[0] from array expression vars_time4 of size 30
+                         : Using variable vars_time5[0] from array expression vars_time5 of size 30
+                         : Using variable vars_time6[0] from array expression vars_time6 of size 30
+                         : Using variable vars_time7[0] from array expression vars_time7 of size 30
+                         : Using variable vars_time8[0] from array expression vars_time8 of size 30
+                         : Using variable vars_time9[0] from array expression vars_time9 of size 30
+DataSetFactory           : [dataset] : Number of events in input trees
+                         : 
+                         : 
+                         : Number of training and testing events
+                         : ---------------------------------------------------------------------------
+                         : Signal     -- training events            : 8000
+                         : Signal     -- testing events             : 2000
+                         : Signal     -- training and testing events: 10000
+                         : Background -- training events            : 8000
+                         : Background -- testing events             : 2000
+                         : Background -- training and testing events: 10000
+                         : 
+Factory                  : [1mTrain all methods[0m
+Factory                  : Train method: TMVA_LSTM for Classification
+                         : 
+                         : Start of deep neural network training on CPU using MT,  nthreads = 8
+                         : 
+                         : *****   Deep Learning Network *****
+DEEP NEURAL NETWORK:   Depth = 4  Input = ( 10, 1, 30 )  Batch size = 100  Loss function = C
+	Layer 0	 LSTM Layer: 	  (NInput = 30, NState = 10, NTime  = 10 )	Output = ( 100 , 10 , 10 )
+	Layer 1	 RESHAPE Layer 	 Input = ( 1 , 10 , 10 ) 	Output = ( 1 , 100 , 100 ) 
+	Layer 2	 DENSE Layer: 	 ( Input =   100 , Width =    64 ) 	Output = (  1 ,   100 ,    64 ) 	 Activation Function = Tanh
+	Layer 3	 DENSE Layer: 	 ( Input =    64 , Width =     1 ) 	Output = (  1 ,   100 ,     1 ) 	 Activation Function = Identity
+                         : Using 12800 events for training and 3200 for testing
+                         : Compute initial loss  on the validation data 
+                         : Training phase 1 of 1:  Optimizer ADAM Learning rate = 0.001 regularization 0 minimum error = 0.708791
+                         : --------------------------------------------------------------
+                         :      Epoch |   Train Err.   Val. Err.  t(s)/epoch   t(s)/Loss   nEvents/s Conv. Steps
+                         : --------------------------------------------------------------
+                         :    Start epoch iteration ...
+                         :          1 Minimum Test error found - save the configuration 
+                         :          1 |     0.685455      0.6591     1.31628    0.088898     10428.7           0
+                         :          2 Minimum Test error found - save the configuration 
+                         :          2 |     0.618378    0.556803     1.44229    0.088875     9457.54           0
+                         :          3 Minimum Test error found - save the configuration 
+                         :          3 |     0.538944    0.504379     1.45082     0.08927     9401.04           0
+                         :          4 Minimum Test error found - save the configuration 
+                         :          4 |     0.495409    0.472164     1.41614    0.090616     9656.59           0
+                         :          5 Minimum Test error found - save the configuration 
+                         :          5 |     0.464062     0.46391     1.57452    0.096719     8661.52           0
+                         :          6 Minimum Test error found - save the configuration 
+                         :          6 |     0.447715    0.444292     1.54757    0.090807     8786.61           0
+                         :          7 Minimum Test error found - save the configuration 
+                         :          7 |     0.428999    0.438087     1.52917    0.093195     8913.83           0
+                         :          8 Minimum Test error found - save the configuration 
+                         :          8 |     0.419475    0.424978     1.57862    0.104268      8681.8           0
+                         :          9 |      0.41594    0.426582     1.72357    0.098804     7878.06           1
+                         :         10 Minimum Test error found - save the configuration 
+                         :         10 |     0.405906    0.419021      1.7363    0.095766     7802.35           0
+                         :         11 |     0.401759    0.421383     1.67633    0.092805     8083.26           1
+                         :         12 |     0.397981    0.421582     1.77801    0.103105     7642.21           2
+                         :         13 Minimum Test error found - save the configuration 
+                         :         13 |     0.397421    0.410821     1.83586    0.101478     7380.15           0
+                         :         14 |     0.395431    0.412244     1.90997     0.10517     7092.21           1
+                         :         15 Minimum Test error found - save the configuration 
+                         :         15 |     0.390656    0.409831     1.92646    0.119256     7082.78           0
+                         :         16 |     0.389446    0.429608     1.85677    0.116383     7354.67           1
+                         :         17 Minimum Test error found - save the configuration 
+                         :         17 |     0.387134    0.409489     1.84395     0.10351     7354.46           0
+                         :         18 |     0.386853    0.411365     1.74556    0.095056     7755.19           1
+                         :         19 |     0.388758    0.421799     1.77139    0.091858     7621.18           2
+                         :         20 |     0.384741    0.415779     1.77664    0.107257      7667.5           3
+                         : 
+                         : Elapsed time for training with 16000 events: [1;31m33.5 sec[0m         
+                         : Evaluate deep neural network on CPU using batches with size = 100
+                         : 
+TMVA_LSTM                : [dataset] : Evaluation of TMVA_LSTM on training sample (16000 events)
+                         : Elapsed time for evaluation of 16000 events: [1;31m0.496 sec[0m       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_TMVA_LSTM.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_TMVA_LSTM.class.C[0m
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: TMVA_DNN for Classification
+                         : 
+                         : Start of deep neural network training on CPU using MT,  nthreads = 8
+                         : 
+                         : *****   Deep Learning Network *****
+DEEP NEURAL NETWORK:   Depth = 4  Input = ( 1, 1, 300 )  Batch size = 256  Loss function = C
+	Layer 0	 DENSE Layer: 	 ( Input =   300 , Width =    64 ) 	Output = (  1 ,   256 ,    64 ) 	 Activation Function = Tanh
+	Layer 1	 DENSE Layer: 	 ( Input =    64 , Width =    64 ) 	Output = (  1 ,   256 ,    64 ) 	 Activation Function = Tanh
+	Layer 2	 DENSE Layer: 	 ( Input =    64 , Width =    64 ) 	Output = (  1 ,   256 ,    64 ) 	 Activation Function = Tanh
+	Layer 3	 DENSE Layer: 	 ( Input =    64 , Width =     1 ) 	Output = (  1 ,   256 ,     1 ) 	 Activation Function = Identity
+                         : Using 12800 events for training and 3200 for testing
+                         : Compute initial loss  on the validation data 
+                         : Training phase 1 of 1:  Optimizer ADAM Learning rate = 0.001 regularization 0 minimum error = 1.27287
+                         : --------------------------------------------------------------
+                         :      Epoch |   Train Err.   Val. Err.  t(s)/epoch   t(s)/Loss   nEvents/s Conv. Steps
+                         : --------------------------------------------------------------
+                         :    Start epoch iteration ...
+                         :          1 Minimum Test error found - save the configuration 
+                         :          1 |     0.733897    0.688938     0.13469    0.016433      108239           0
+                         :          2 Minimum Test error found - save the configuration 
+                         :          2 |     0.682611    0.680542    0.093081    0.010263      154556           0
+                         :          3 Minimum Test error found - save the configuration 
+                         :          3 |     0.678967    0.674323     0.09158    0.010275      157432           0
+                         :          4 |     0.680943    0.691162    0.094433     0.01103      153472           1
+                         :          5 |     0.682354    0.690599    0.095686    0.010543      150335           2
+                         :          6 Minimum Test error found - save the configuration 
+                         :          6 |     0.672424    0.673014    0.089635    0.010219      161177           0
+                         :          7 Minimum Test error found - save the configuration 
+                         :          7 |     0.668179    0.656665    0.090566    0.010229      159329           0
+                         :          8 |     0.659132    0.658764    0.102638    0.010179      138440           1
+                         :          9 |      0.65555    0.663285    0.094808    0.009683      150367           2
+                         :         10 |     0.659262    0.686952    0.090597    0.011102      161016           3
+                         :         11 |     0.690255    0.693445    0.095722    0.009916      149174           4
+                         :         12 |     0.692548    0.685824    0.093641    0.009844      152750           5
+                         :         13 Minimum Test error found - save the configuration 
+                         :         13 |     0.675204     0.65335    0.091157    0.010194      158097           0
+                         :         14 Minimum Test error found - save the configuration 
+                         :         14 |     0.662977    0.638665    0.100079    0.010219      142444           0
+                         :         15 Minimum Test error found - save the configuration 
+                         :         15 |     0.637849    0.627942    0.132415    0.010451      104949           0
+                         :         16 |     0.632784    0.630308      0.1476     0.00989       92949           1
+                         :         17 Minimum Test error found - save the configuration 
+                         :         17 |     0.622698    0.602061    0.144125     0.01065     95898.1           0
+                         :         18 Minimum Test error found - save the configuration 
+                         :         18 |     0.614189    0.592297    0.141336    0.012764     99555.1           0
+                         :         19 Minimum Test error found - save the configuration 
+                         :         19 |     0.597252    0.579371    0.139242     0.01052     99439.1           0
+                         :         20 Minimum Test error found - save the configuration 
+                         :         20 |     0.595907    0.574724    0.132289    0.010166      104812           0
+                         : 
+                         : Elapsed time for training with 16000 events: [1;31m2.21 sec[0m         
+                         : Evaluate deep neural network on CPU using batches with size = 256
+                         : 
+TMVA_DNN                 : [dataset] : Evaluation of TMVA_DNN on training sample (16000 events)
+                         : Elapsed time for evaluation of 16000 events: [1;31m0.0532 sec[0m       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_TMVA_DNN.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_TMVA_DNN.class.C[0m
+Factory                  : Training finished
+                         : 
+Factory                  : Train method: BDTG for Classification
+                         : 
+BDTG                     : #events: (reweighted) sig: 8000 bkg: 8000
+                         : #events: (unweighted) sig: 8000 bkg: 8000
+                         : Training 100 Decision Trees ... patience please
+                         : Elapsed time for training with 16000 events: [1;31m5.98 sec[0m         
+BDTG                     : [dataset] : Evaluation of BDTG on training sample (16000 events)
+                         : Elapsed time for evaluation of 16000 events: [1;31m0.0608 sec[0m       
+                         : Creating xml weight file: [0;36mdataset/weights/TMVAClassification_BDTG.weights.xml[0m
+                         : Creating standalone class: [0;36mdataset/weights/TMVAClassification_BDTG.class.C[0m
+                         : data_RNN_CPU.root:/dataset/Method_BDT/BDTG
+Factory                  : Training finished
+                         : 
+                         : Ranking input variables (method specific)...
+                         : No variable ranking supplied by classifier: TMVA_LSTM
+                         : No variable ranking supplied by classifier: TMVA_DNN
+BDTG                     : Ranking result (top variable is best ranked)
+                         : --------------------------------------------
+                         : Rank : Variable   : Variable Importance
+                         : --------------------------------------------
+                         :    1 : vars_time8 : 3.305e-02
+                         :    2 : vars_time7 : 3.111e-02
+                         :    3 : vars_time9 : 3.039e-02
+                         :    4 : vars_time8 : 2.774e-02
+                         :    5 : vars_time9 : 2.713e-02
+                         :    6 : vars_time6 : 2.667e-02
+                         :    7 : vars_time7 : 2.650e-02
+                         :    8 : vars_time8 : 2.647e-02
+                         :    9 : vars_time7 : 2.489e-02
+                         :   10 : vars_time7 : 2.464e-02
+                         :   11 : vars_time6 : 2.364e-02
+                         :   12 : vars_time8 : 2.335e-02
+                         :   13 : vars_time7 : 2.226e-02
+                         :   14 : vars_time9 : 2.182e-02
+                         :   15 : vars_time0 : 2.172e-02
+                         :   16 : vars_time9 : 2.158e-02
+                         :   17 : vars_time9 : 2.130e-02
+                         :   18 : vars_time6 : 2.067e-02
+                         :   19 : vars_time8 : 2.042e-02
+                         :   20 : vars_time5 : 1.965e-02
+                         :   21 : vars_time9 : 1.896e-02
+                         :   22 : vars_time5 : 1.841e-02
+                         :   23 : vars_time0 : 1.830e-02
+                         :   24 : vars_time5 : 1.827e-02
+                         :   25 : vars_time8 : 1.773e-02
+                         :   26 : vars_time6 : 1.766e-02
+                         :   27 : vars_time8 : 1.606e-02
+                         :   28 : vars_time0 : 1.606e-02
+                         :   29 : vars_time6 : 1.591e-02
+                         :   30 : vars_time7 : 1.561e-02
+                         :   31 : vars_time8 : 1.525e-02
+                         :   32 : vars_time7 : 1.428e-02
+                         :   33 : vars_time9 : 1.376e-02
+                         :   34 : vars_time8 : 1.309e-02
+                         :   35 : vars_time8 : 1.286e-02
+                         :   36 : vars_time9 : 1.241e-02
+                         :   37 : vars_time6 : 1.202e-02
+                         :   38 : vars_time9 : 1.191e-02
+                         :   39 : vars_time0 : 1.189e-02
+                         :   40 : vars_time9 : 1.163e-02
+                         :   41 : vars_time8 : 1.014e-02
+                         :   42 : vars_time6 : 1.010e-02
+                         :   43 : vars_time9 : 9.995e-03
+                         :   44 : vars_time6 : 9.820e-03
+                         :   45 : vars_time8 : 9.693e-03
+                         :   46 : vars_time0 : 9.444e-03
+                         :   47 : vars_time5 : 9.102e-03
+                         :   48 : vars_time9 : 8.004e-03
+                         :   49 : vars_time5 : 7.403e-03
+                         :   50 : vars_time1 : 7.397e-03
+                         :   51 : vars_time9 : 7.047e-03
+                         :   52 : vars_time7 : 7.042e-03
+                         :   53 : vars_time7 : 6.873e-03
+                         :   54 : vars_time4 : 6.812e-03
+                         :   55 : vars_time7 : 6.795e-03
+                         :   56 : vars_time6 : 6.660e-03
+                         :   57 : vars_time8 : 6.614e-03
+                         :   58 : vars_time6 : 6.242e-03
+                         :   59 : vars_time9 : 6.204e-03
+                         :   60 : vars_time7 : 6.113e-03
+                         :   61 : vars_time8 : 5.823e-03
+                         :   62 : vars_time5 : 5.528e-03
+                         :   63 : vars_time7 : 5.200e-03
+                         :   64 : vars_time9 : 4.941e-03
+                         :   65 : vars_time7 : 4.623e-03
+                         :   66 : vars_time6 : 4.614e-03
+                         :   67 : vars_time4 : 4.242e-03
+                         :   68 : vars_time5 : 3.890e-03
+                         :   69 : vars_time0 : 3.562e-03
+                         :   70 : vars_time0 : 3.015e-03
+                         :   71 : vars_time0 : 0.000e+00
+                         :   72 : vars_time0 : 0.000e+00
+                         :   73 : vars_time0 : 0.000e+00
+                         :   74 : vars_time0 : 0.000e+00
+                         :   75 : vars_time0 : 0.000e+00
+                         :   76 : vars_time0 : 0.000e+00
+                         :   77 : vars_time0 : 0.000e+00
+                         :   78 : vars_time0 : 0.000e+00
+                         :   79 : vars_time0 : 0.000e+00
+                         :   80 : vars_time0 : 0.000e+00
+                         :   81 : vars_time0 : 0.000e+00
+                         :   82 : vars_time0 : 0.000e+00
+                         :   83 : vars_time0 : 0.000e+00
+                         :   84 : vars_time0 : 0.000e+00
+                         :   85 : vars_time0 : 0.000e+00
+                         :   86 : vars_time0 : 0.000e+00
+                         :   87 : vars_time0 : 0.000e+00
+                         :   88 : vars_time0 : 0.000e+00
+                         :   89 : vars_time0 : 0.000e+00
+                         :   90 : vars_time0 : 0.000e+00
+                         :   91 : vars_time0 : 0.000e+00
+                         :   92 : vars_time0 : 0.000e+00
+                         :   93 : vars_time0 : 0.000e+00
+                         :   94 : vars_time1 : 0.000e+00
+                         :   95 : vars_time1 : 0.000e+00
+                         :   96 : vars_time1 : 0.000e+00
+                         :   97 : vars_time1 : 0.000e+00
+                         :   98 : vars_time1 : 0.000e+00
+                         :   99 : vars_time1 : 0.000e+00
+                         :  100 : vars_time1 : 0.000e+00
+                         :  101 : vars_time1 : 0.000e+00
+                         :  102 : vars_time1 : 0.000e+00
+                         :  103 : vars_time1 : 0.000e+00
+                         :  104 : vars_time1 : 0.000e+00
+                         :  105 : vars_time1 : 0.000e+00
+                         :  106 : vars_time1 : 0.000e+00
+                         :  107 : vars_time1 : 0.000e+00
+                         :  108 : vars_time1 : 0.000e+00
+                         :  109 : vars_time1 : 0.000e+00
+                         :  110 : vars_time1 : 0.000e+00
+                         :  111 : vars_time1 : 0.000e+00
+                         :  112 : vars_time1 : 0.000e+00
+                         :  113 : vars_time1 : 0.000e+00
+                         :  114 : vars_time1 : 0.000e+00
+                         :  115 : vars_time1 : 0.000e+00
+                         :  116 : vars_time1 : 0.000e+00
+                         :  117 : vars_time1 : 0.000e+00
+                         :  118 : vars_time1 : 0.000e+00
+                         :  119 : vars_time1 : 0.000e+00
+                         :  120 : vars_time1 : 0.000e+00
+                         :  121 : vars_time1 : 0.000e+00
+                         :  122 : vars_time1 : 0.000e+00
+                         :  123 : vars_time2 : 0.000e+00
+                         :  124 : vars_time2 : 0.000e+00
+                         :  125 : vars_time2 : 0.000e+00
+                         :  126 : vars_time2 : 0.000e+00
+                         :  127 : vars_time2 : 0.000e+00
+                         :  128 : vars_time2 : 0.000e+00
+                         :  129 : vars_time2 : 0.000e+00
+                         :  130 : vars_time2 : 0.000e+00
+                         :  131 : vars_time2 : 0.000e+00
+                         :  132 : vars_time2 : 0.000e+00
+                         :  133 : vars_time2 : 0.000e+00
+                         :  134 : vars_time2 : 0.000e+00
+                         :  135 : vars_time2 : 0.000e+00
+                         :  136 : vars_time2 : 0.000e+00
+                         :  137 : vars_time2 : 0.000e+00
+                         :  138 : vars_time2 : 0.000e+00
+                         :  139 : vars_time2 : 0.000e+00
+                         :  140 : vars_time2 : 0.000e+00
+                         :  141 : vars_time2 : 0.000e+00
+                         :  142 : vars_time2 : 0.000e+00
+                         :  143 : vars_time2 : 0.000e+00
+                         :  144 : vars_time2 : 0.000e+00
+                         :  145 : vars_time2 : 0.000e+00
+                         :  146 : vars_time2 : 0.000e+00
+                         :  147 : vars_time2 : 0.000e+00
+                         :  148 : vars_time2 : 0.000e+00
+                         :  149 : vars_time2 : 0.000e+00
+                         :  150 : vars_time2 : 0.000e+00
+                         :  151 : vars_time2 : 0.000e+00
+                         :  152 : vars_time2 : 0.000e+00
+                         :  153 : vars_time3 : 0.000e+00
+                         :  154 : vars_time3 : 0.000e+00
+                         :  155 : vars_time3 : 0.000e+00
+                         :  156 : vars_time3 : 0.000e+00
+                         :  157 : vars_time3 : 0.000e+00
+                         :  158 : vars_time3 : 0.000e+00
+                         :  159 : vars_time3 : 0.000e+00
+                         :  160 : vars_time3 : 0.000e+00
+                         :  161 : vars_time3 : 0.000e+00
+                         :  162 : vars_time3 : 0.000e+00
+                         :  163 : vars_time3 : 0.000e+00
+                         :  164 : vars_time3 : 0.000e+00
+                         :  165 : vars_time3 : 0.000e+00
+                         :  166 : vars_time3 : 0.000e+00
+                         :  167 : vars_time3 : 0.000e+00
+                         :  168 : vars_time3 : 0.000e+00
+                         :  169 : vars_time3 : 0.000e+00
+                         :  170 : vars_time3 : 0.000e+00
+                         :  171 : vars_time3 : 0.000e+00
+                         :  172 : vars_time3 : 0.000e+00
+                         :  173 : vars_time3 : 0.000e+00
+                         :  174 : vars_time3 : 0.000e+00
+                         :  175 : vars_time3 : 0.000e+00
+                         :  176 : vars_time3 : 0.000e+00
+                         :  177 : vars_time3 : 0.000e+00
+                         :  178 : vars_time3 : 0.000e+00
+                         :  179 : vars_time3 : 0.000e+00
+                         :  180 : vars_time3 : 0.000e+00
+                         :  181 : vars_time3 : 0.000e+00
+                         :  182 : vars_time3 : 0.000e+00
+                         :  183 : vars_time4 : 0.000e+00
+                         :  184 : vars_time4 : 0.000e+00
+                         :  185 : vars_time4 : 0.000e+00
+                         :  186 : vars_time4 : 0.000e+00
+                         :  187 : vars_time4 : 0.000e+00
+                         :  188 : vars_time4 : 0.000e+00
+                         :  189 : vars_time4 : 0.000e+00
+                         :  190 : vars_time4 : 0.000e+00
+                         :  191 : vars_time4 : 0.000e+00
+                         :  192 : vars_time4 : 0.000e+00
+                         :  193 : vars_time4 : 0.000e+00
+                         :  194 : vars_time4 : 0.000e+00
+                         :  195 : vars_time4 : 0.000e+00
+                         :  196 : vars_time4 : 0.000e+00
+                         :  197 : vars_time4 : 0.000e+00
+                         :  198 : vars_time4 : 0.000e+00
+                         :  199 : vars_time4 : 0.000e+00
+                         :  200 : vars_time4 : 0.000e+00
+                         :  201 : vars_time4 : 0.000e+00
+                         :  202 : vars_time4 : 0.000e+00
+                         :  203 : vars_time4 : 0.000e+00
+                         :  204 : vars_time4 : 0.000e+00
+                         :  205 : vars_time4 : 0.000e+00
+                         :  206 : vars_time4 : 0.000e+00
+                         :  207 : vars_time4 : 0.000e+00
+                         :  208 : vars_time4 : 0.000e+00
+                         :  209 : vars_time4 : 0.000e+00
+                         :  210 : vars_time4 : 0.000e+00
+                         :  211 : vars_time5 : 0.000e+00
+                         :  212 : vars_time5 : 0.000e+00
+                         :  213 : vars_time5 : 0.000e+00
+                         :  214 : vars_time5 : 0.000e+00
+                         :  215 : vars_time5 : 0.000e+00
+                         :  216 : vars_time5 : 0.000e+00
+                         :  217 : vars_time5 : 0.000e+00
+                         :  218 : vars_time5 : 0.000e+00
+                         :  219 : vars_time5 : 0.000e+00
+                         :  220 : vars_time5 : 0.000e+00
+                         :  221 : vars_time5 : 0.000e+00
+                         :  222 : vars_time5 : 0.000e+00
+                         :  223 : vars_time5 : 0.000e+00
+                         :  224 : vars_time5 : 0.000e+00
+                         :  225 : vars_time5 : 0.000e+00
+                         :  226 : vars_time5 : 0.000e+00
+                         :  227 : vars_time5 : 0.000e+00
+                         :  228 : vars_time5 : 0.000e+00
+                         :  229 : vars_time5 : 0.000e+00
+                         :  230 : vars_time5 : 0.000e+00
+                         :  231 : vars_time5 : 0.000e+00
+                         :  232 : vars_time5 : 0.000e+00
+                         :  233 : vars_time5 : 0.000e+00
+                         :  234 : vars_time6 : 0.000e+00
+                         :  235 : vars_time6 : 0.000e+00
+                         :  236 : vars_time6 : 0.000e+00
+                         :  237 : vars_time6 : 0.000e+00
+                         :  238 : vars_time6 : 0.000e+00
+                         :  239 : vars_time6 : 0.000e+00
+                         :  240 : vars_time6 : 0.000e+00
+                         :  241 : vars_time6 : 0.000e+00
+                         :  242 : vars_time6 : 0.000e+00
+                         :  243 : vars_time6 : 0.000e+00
+                         :  244 : vars_time6 : 0.000e+00
+                         :  245 : vars_time6 : 0.000e+00
+                         :  246 : vars_time6 : 0.000e+00
+                         :  247 : vars_time6 : 0.000e+00
+                         :  248 : vars_time6 : 0.000e+00
+                         :  249 : vars_time6 : 0.000e+00
+                         :  250 : vars_time6 : 0.000e+00
+                         :  251 : vars_time6 : 0.000e+00
+                         :  252 : vars_time6 : 0.000e+00
+                         :  253 : vars_time7 : 0.000e+00
+                         :  254 : vars_time7 : 0.000e+00
+                         :  255 : vars_time7 : 0.000e+00
+                         :  256 : vars_time7 : 0.000e+00
+                         :  257 : vars_time7 : 0.000e+00
+                         :  258 : vars_time7 : 0.000e+00
+                         :  259 : vars_time7 : 0.000e+00
+                         :  260 : vars_time7 : 0.000e+00
+                         :  261 : vars_time7 : 0.000e+00
+                         :  262 : vars_time7 : 0.000e+00
+                         :  263 : vars_time7 : 0.000e+00
+                         :  264 : vars_time7 : 0.000e+00
+                         :  265 : vars_time7 : 0.000e+00
+                         :  266 : vars_time7 : 0.000e+00
+                         :  267 : vars_time7 : 0.000e+00
+                         :  268 : vars_time7 : 0.000e+00
+                         :  269 : vars_time7 : 0.000e+00
+                         :  270 : vars_time8 : 0.000e+00
+                         :  271 : vars_time8 : 0.000e+00
+                         :  272 : vars_time8 : 0.000e+00
+                         :  273 : vars_time8 : 0.000e+00
+                         :  274 : vars_time8 : 0.000e+00
+                         :  275 : vars_time8 : 0.000e+00
+                         :  276 : vars_time8 : 0.000e+00
+                         :  277 : vars_time8 : 0.000e+00
+                         :  278 : vars_time8 : 0.000e+00
+                         :  279 : vars_time8 : 0.000e+00
+                         :  280 : vars_time8 : 0.000e+00
+                         :  281 : vars_time8 : 0.000e+00
+                         :  282 : vars_time8 : 0.000e+00
+                         :  283 : vars_time8 : 0.000e+00
+                         :  284 : vars_time8 : 0.000e+00
+                         :  285 : vars_time8 : 0.000e+00
+                         :  286 : vars_time9 : 0.000e+00
+                         :  287 : vars_time9 : 0.000e+00
+                         :  288 : vars_time9 : 0.000e+00
+                         :  289 : vars_time9 : 0.000e+00
+                         :  290 : vars_time9 : 0.000e+00
+                         :  291 : vars_time9 : 0.000e+00
+                         :  292 : vars_time9 : 0.000e+00
+                         :  293 : vars_time9 : 0.000e+00
+                         :  294 : vars_time9 : 0.000e+00
+                         :  295 : vars_time9 : 0.000e+00
+                         :  296 : vars_time9 : 0.000e+00
+                         :  297 : vars_time9 : 0.000e+00
+                         :  298 : vars_time9 : 0.000e+00
+                         :  299 : vars_time9 : 0.000e+00
+                         :  300 : vars_time9 : 0.000e+00
+                         : --------------------------------------------
+TH1.Print Name  = TrainingHistory_TMVA_LSTM_trainingError, Entries= 0, Total sum= 8.84046
+TH1.Print Name  = TrainingHistory_TMVA_LSTM_valError, Entries= 0, Total sum= 8.97322
+TH1.Print Name  = TrainingHistory_TMVA_DNN_trainingError, Entries= 0, Total sum= 13.195
+TH1.Print Name  = TrainingHistory_TMVA_DNN_valError, Entries= 0, Total sum= 13.0422
+Factory                  : === Destroy and recreate all methods via weight files for testing ===
+                         : 
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_TMVA_LSTM.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_TMVA_DNN.weights.xml[0m
+                         : Reading weight file: [0;36mdataset/weights/TMVAClassification_BDTG.weights.xml[0m
+nthreads  = 8
+Factory                  : [1mTest all methods[0m
+Factory                  : Test method: TMVA_LSTM for Classification performance
+                         : 
+                         : Evaluate deep neural network on CPU using batches with size = 1000
+                         : 
+TMVA_LSTM                : [dataset] : Evaluation of TMVA_LSTM on testing sample (4000 events)
+                         : Elapsed time for evaluation of 4000 events: [1;31m0.102 sec[0m       
+Factory                  : Test method: TMVA_DNN for Classification performance
+                         : 
+                         : Evaluate deep neural network on CPU using batches with size = 1000
+                         : 
+TMVA_DNN                 : [dataset] : Evaluation of TMVA_DNN on testing sample (4000 events)
+                         : Elapsed time for evaluation of 4000 events: [1;31m0.0106 sec[0m       
+Factory                  : Test method: BDTG for Classification performance
+                         : 
+BDTG                     : [dataset] : Evaluation of BDTG on testing sample (4000 events)
+                         : Elapsed time for evaluation of 4000 events: [1;31m0.016 sec[0m       
+Factory                  : [1mEvaluate all methods[0m
+Factory                  : Evaluate classifier: TMVA_LSTM
+                         : 
+TMVA_LSTM                : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+                         : Evaluate deep neural network on CPU using batches with size = 1000
+                         : 
+                         : Dataset[dataset] :  variable plots are not produces ! The number of variables is 300 , it is larger than 200
+Factory                  : Evaluate classifier: TMVA_DNN
+                         : 
+TMVA_DNN                 : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+                         : Evaluate deep neural network on CPU using batches with size = 1000
+                         : 
+                         : Dataset[dataset] :  variable plots are not produces ! The number of variables is 300 , it is larger than 200
+Factory                  : Evaluate classifier: BDTG
+                         : 
+BDTG                     : [dataset] : Loop over test events and fill histograms with classifier response...
+                         : 
+                         : Dataset[dataset] :  variable plots are not produces ! The number of variables is 300 , it is larger than 200
+                         : 
+                         : Evaluation results ranked by best signal efficiency and purity (area)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet       MVA                       
+                         : Name:         Method:          ROC-integ
+                         : dataset       TMVA_LSTM      : 0.903
+                         : dataset       BDTG           : 0.847
+                         : dataset       TMVA_DNN       : 0.777
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+                         : Testing efficiency compared to training efficiency (overtraining check)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : DataSet              MVA              Signal efficiency: from test sample (from training sample) 
+                         : Name:                Method:          @B=0.01             @B=0.10            @B=0.30   
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : dataset              TMVA_LSTM      : 0.282 (0.289)       0.693 (0.707)      0.910 (0.912)
+                         : dataset              BDTG           : 0.150 (0.178)       0.575 (0.586)      0.827 (0.839)
+                         : dataset              TMVA_DNN       : 0.000 (0.000)       0.000 (0.000)      0.727 (0.723)
+                         : -------------------------------------------------------------------------------------------------------------------
+                         : 
+Dataset:dataset          : Created tree 'TestTree' with 4000 events
+                         : 
+Dataset:dataset          : Created tree 'TrainTree' with 16000 events
+                         : 
+Factory                  : [1mThank you for using TMVA![0m
+                         : [1mFor citation information, please visit: http://tmva.sf.net/citeTMVA.html[0m
