@@ -195,7 +195,8 @@ G4VPhysicalVolume* B5DetectorConstruction::Construct()
 
   for (auto i=0;i<kNofChambers;i++) {
     // G4double z1 = (i-kNofChambers/2.+0.5)*0.5*m;
-    G4double z1 = (i-kNofChambers/2.+0.5)*0.3*m;
+    // G4double z1 = (i-kNofChambers/2.+0.5)*0.3*m;
+    G4double z1 = (i-kNofChambers/2.+0.5)*0.15*m;
     auto rotate = new G4RotationMatrix();
     rotate->rotateX(-90.*deg);
     new G4PVPlacement(rotate,G4ThreeVector(0.,z1,0.),chamber1Logical,

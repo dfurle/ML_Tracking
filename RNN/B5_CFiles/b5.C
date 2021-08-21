@@ -27,12 +27,14 @@ void b5::Loop(){
   std::vector<std::vector<double>> position_z;
   std::vector<double> initialAngle;
   std::vector<double> chi_a;
+  std::vector<double> chi_b;
   std::array<std::vector<int>,302> id_array;
 
   mTree->Branch("x",&position_x);
   mTree->Branch("z",&position_z);
   mTree->Branch("initialAngle",&initialAngle);
   mTree->Branch("chi_a",&chi_a);
+  mTree->Branch("chi_b",&chi_b);
 
   TGraph* graph[3];
   for(int i = 0; i < 3; i++){
@@ -80,6 +82,7 @@ void b5::Loop(){
     position_z.clear();
     initialAngle.clear();
     chi_a.clear();
+    chi_b.clear();
 
     for(int i = 0; i < 302; i++){
       id_array[i].clear();
@@ -242,7 +245,7 @@ void b5::Loop(){
     }
 
     printf("tracks found at:\n");
-    for(int a = 0; a < angles.size() && a < position_x.size(); a++){
+    for(int a = 0; a < angles.size() && a < position_x.size() && a < 3; a++){
       printf(" bin:%d with angle %f\n",angles[a].first,angles[a].second);
       for(int i = 0; i < position_x[a].size(); i++){
         // graph[a]->SetPoint(graph[a]->GetN(), position[a][i]["x"],position[a][i]["z"]);
@@ -266,6 +269,7 @@ void b5::Loop(){
       Double_t p1 = ffit[i]->GetParameter(1);
       Double_t p0 = ffit[i]->GetParameter(0);
       chi_a.push_back(p1);
+      chi_b.push_back(p0);
       printf("p1: %f | %f\n",p1,p0);
       // ffit[i]->Update();
       c1->cd(4+i);

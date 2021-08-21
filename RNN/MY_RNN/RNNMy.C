@@ -15,14 +15,14 @@
 #include "TMVA/TMVAGui.h"
 #include "TMVA/Tools.h"
 
-void RNN() {
+void RNNMy() {
 
   int ntime = 10;
-  int ninput = 30;
+  int ninput = 2;
   int batchSize = 100;
   int maxepochs = 20;
 
-  int nTotEvts = 10000; // total events to be generated for signal or background
+  int nTotEvts = 20; // total events to be generated for signal or background
 
   TMVA::PyMethodBase::PyInitialize();
 
@@ -41,7 +41,6 @@ void RNN() {
                                              "AnalysisType=Classification:ModelPersistence");
 
   TMVA::DataLoader* dataloader = new TMVA::DataLoader("dataset");
-  // dataloader->AddVariable("var");
 
   TTree* signalTree = (TTree*)inputFile->Get("sgn");
   TTree* background = (TTree*)inputFile->Get("bkg");
@@ -51,33 +50,74 @@ void RNN() {
   TTreeReader myReader("mTree",&inputFile2);
   TTreeReaderValue<std::vector<std::vector<double>>> myVectorX(myReader,"x");
   TTreeReaderValue<std::vector<std::vector<double>>> myVectorZ(myReader,"z");
-  std::vector<std::vector<double>> b_x;
-  std::vector<std::vector<double>> b_z;
+  TTreeReaderValue<std::vector<double>> myVectorA(myReader,"initialAngle");
+  std::vector<std::array<std::array<double,2>,10>> x_train;
+  std::vector<std::array<double,10>> y_train;
 
   unsigned int evtCounter = 0;
   while (myReader.Next()){
     cout << "Event " << evtCounter++ << endl;
-    for (auto&& value : *myVectorX){
-      for (auto&& value : value){
-        cout << "x: " << value << " ";
-      }
-      cout << endl;
+    
+    if(myVectorX->size() > 1)
+      myVectorX->erase(myVectorX->begin());
+    auto x = myVectorX->at(0);
+    if(myVectorZ->size() > 1)
+      myVectorZ->erase(myVectorZ->begin());
+    auto z = myVectorZ->at(0);
+    if(myVectorA->size() > 1)
+      myVectorA->erase(myVectorA->begin());
+    auto a = myVectorA->at(0);
+
+
+    std::array<std::array<double,2>,10> tmp;
+
+    cout << "x: ";
+    for (int i = 0; i < 10; i++){
+      // printf("(%6.1f|%5.0f) ",x.at(i),z.at(i));
+      std::array<double,2> tmp_2;
+      tmp_2[0] = x.at(i);
+      tmp_2[1] = z.at(i);
+      tmp[i] = tmp_2;
     }
-    for (auto&& value : *myVectorZ){
-      for (auto&& a : value){
-        cout << "z: " << a << " ";
-      }
-      cout << endl;
+    cout << endl;
+    x_train.push_back(tmp);
+
+    std::array<double,10> tmp_a;
+
+    cout << "a: ";
+    for (int i = 0; i < 10; i++){
+      // printf("%f ",a);
+      tmp_a[i] = a;
     }
+    cout << endl;
+    y_train.push_back(tmp_a);
   }
+
+  // for(int i = 0; i < x_train.size(); i++){
+  //   for(int j = 0; j < 10; j++){
+  //     printf("(%f,%f) ",x_train[i][j][0],x_train[i][j][1]);
+  //   }
+  //   printf("\n");
+  // }
+
+  // for(int i = 0; i < y_train.size(); i++){
+  //   for(int j = 0; j < 10; j++){
+  //     printf("(%f) ",y_train[i][j]);
+  //   }
+  //   printf("\n");
+  // }
 
   /// add variables - use new AddVariablesArray function
   for (auto i = 0; i < ntime; i++) {
     dataloader->AddVariablesArray(Form("vars_time%d", i), ninput);
   }
 
-  dataloader->AddSignalTree(signalTree, 1.0);
-  dataloader->AddBackgroundTree(background, 1.0);
+  printf("\n\naaaaaa\n%s\n\n",typeid(signalTree).name());
+
+  // dataloader->AddSignalTree(signalTree, 1.0);
+  // dataloader->AddBackgroundTree(background, 1.0);
+
+  // dataloader->AddTrainingEvent("className",x_train, 0.8);
 
   // check given input
   auto& datainfo = dataloader->GetDataSetInfo();
@@ -103,8 +143,7 @@ void RNN() {
 
   dataloader->PrepareTrainingAndTestTree(mycuts, mycutb, prepareOptions);
 
-  // TString inputLayoutString = TString::Format("InputLayout=%d|%d", ntime, ninput);
-  TString inputLayout = TString::Format("InputLayout=10|2");
+  TString inputLayoutString = TString::Format("InputLayout=%d|%d", ntime, ninput);
 
   /// Define RNN layer layout
   ///  it should be   LayerType (RNN or LSTM or GRU) |  number of units | number of inputs | time steps | remember output (typically no=0 | return full sequence
@@ -112,7 +151,8 @@ void RNN() {
 
   /// add after RNN a reshape layer (needed top flatten the output) and a dense layer with 64 units and a last one
   /// Note the last layer is linear because  when using Crossentropy a Sigmoid is applied already
-  TString layoutString = TString("Layout=") + rnnLayout + TString(",RESHAPE|FLAT,DENSE|64|TANH,LINEAR");
+  // TString layoutString = TString("Layout=") + rnnLayout + TString(",RESHAPE|FLAT,DENSE|64|TANH,LINEAR");
+  TString layoutString = TString("Layout=") + rnnLayout + TString(",RESHAPE|FLAT,DENSE|64|TANH,DENSE|1|LINEAR");
 
   /// Defining Training strategies. Different training strings can be concatenate. Use however only one
   TString trainingString1 = TString::Format("LearningRate=1e-3,Momentum=0.0,Repetitions=1,"
@@ -126,7 +166,10 @@ void RNN() {
   trainingStrategyString += trainingString1; // + "|" + trainingString2
 
   /// Define the full RNN Noption string adding the final options for all network
-  TString rnnOptions("!H:V:ErrorStrategy=CROSSENTROPY:VarTransform=None:"
+  // TString rnnOptions("!H:V:ErrorStrategy=CROSSENTROPY:VarTransform=None:"
+  //                    "WeightInitialization=XAVIERUNIFORM:ValidationSize=0.2:RandomSeed=1234");
+
+  TString rnnOptions("!H:V:ErrorStrategy=SUMOFSQUARES:VarTransform=None:"
                      "WeightInitialization=XAVIERUNIFORM:ValidationSize=0.2:RandomSeed=1234");
 
   rnnOptions.Append(":");
@@ -149,20 +192,20 @@ void RNN() {
 
 
 
+  // exit(0);
 
-
-  if(gSystem->AccessPathName(modelName)){
-    printf("AAAAAAA MODELLLLLL\n");
-  } else {
-    // book PyKeras method only if Keras model could be created
-    printf("AAAA LOADING MODELLLL\n");
-    Info("TMVA_RNN_Classification", "Booking Keras LSTM model");
-    factory->BookMethod(dataloader, TMVA::Types::kPyKeras, "PyKeras_LSTM",
-                        TString::Format("!H:!V:VarTransform=None:FilenameModel=%s:"
-                                        "FilenameTrainedModel=%s:GpuOptions=allow_growth=True:"
-                                        "NumEpochs=%d:BatchSize=%d",
-                                        modelName.Data(), trainedModelName.Data(), maxepochs, batchSize));
-  }
+  // if(gSystem->AccessPathName(modelName)){
+  //   printf("AAAAAAA MODELLLLLL\n");
+  // } else {
+  //   // book PyKeras method only if Keras model could be created
+  //   printf("AAAA LOADING MODELLLL\n");
+  //   Info("TMVA_RNN_Classification", "Booking Keras LSTM model");
+  //   factory->BookMethod(dataloader, TMVA::Types::kPyKeras, "PyKeras_LSTM",
+  //                       TString::Format("!H:!V:VarTransform=None:FilenameModel=%s:"
+  //                                       "FilenameTrainedModel=%s:GpuOptions=allow_growth=True:"
+  //                                       "NumEpochs=%d:BatchSize=%d",
+  //                                       modelName.Data(), trainedModelName.Data(), maxepochs, batchSize));
+  // }
 
 
 

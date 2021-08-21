@@ -35,7 +35,7 @@
 constexpr G4int kNofHodoscopes1 = 15;
 constexpr G4int kNofHodoscopes2 = 25;
 // constexpr G4int kNofChambers = 6;
-constexpr G4int kNofChambers = 10;
+constexpr G4int kNofChambers = 20;
 constexpr G4int kNofEmColumns = 20;
 constexpr G4int kNofEmRows = 4;
 constexpr G4int kNofEmCells = kNofEmColumns * kNofEmRows;
