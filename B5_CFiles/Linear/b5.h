@@ -91,19 +91,19 @@ b5::b5(TTree *tree) : fChain(0)
    }
    Init(tree);
 
-  // h_a = new TH1D("h_a","Angle Of Thing",300,-1.8,-1.4);
-  // h_a = new TH1D("h_a","Angle Of Thing",300,-1.8,-1.);
-  h_a = new TH1D("h_a","Angle Of Thing",300,-0.1,0.1);
-  // h_b = new TH1D("h_b","B intersection",300,-9000,2000);
-  h_b = new TH1D("h_b","B intersection",300,-1000,1000);
-  // h_ab = new TH2D("h_ab","AB 2d hist",20,-1.8,-1.,20,-9000,2000);
-  h_ab = new TH2D("h_ab","AB 2d hist",20,-0.1,0.1,20,-200,200);
+  // // h_a = new TH1D("h_a","Angle Of Thing",300,-1.8,-1.4);
+  // // h_a = new TH1D("h_a","Angle Of Thing",300,-1.8,-1.);
+  // h_a = new TH1D("h_a","Angle Of Thing",300,-0.1,0.1);
+  // // h_b = new TH1D("h_b","B intersection",300,-9000,2000);
+  // h_b = new TH1D("h_b","B intersection",300,-1000,1000);
+  // // h_ab = new TH2D("h_ab","AB 2d hist",20,-1.8,-1.,20,-9000,2000);
+  // h_ab = new TH2D("h_ab","AB 2d hist",20,-0.1,0.1,20,-1000,1000);
 
 
-  // h_x = new TH1D("h_x","x coords",20,-20000, -1000);
-  // h_y = new TH1D("h_y","y coords",20,-4000,-1000);
-  // h_r = new TH1D("h_r","radii",300,5000,20000);
-  // h_xyr = new TH3D("h_xyr","all combined",20,-20000,-1000, 20,-4000,-1000, 20,5000,20000);
+  h_x = new TH1D("h_x","x coords",20,-20000, -1000);
+  h_y = new TH1D("h_y","y coords",20,-4000,-1000);
+  h_r = new TH1D("h_r","radii",300,5000,20000);
+  h_xyr = new TH3D("h_xyr","all combined",20,-20000,-1000, 20,-4000,-1000, 20,5000,20000);
 }
 
 b5::~b5()

@@ -3,7 +3,7 @@
 #include <TH2.h>
 #include <TStyle.h>
 #include <TCanvas.h>
-
+#include <pthread.h>
 
 // int[2] line_params(double c1[2], double c2[2]){
 //   auto slope = (c1[1]-c2[1])/(c1[0]-c2[0])
@@ -13,8 +13,16 @@
 //   return int[2]{-1/slope,intercept}
 // }
 
+pthread_t mthread;
+bool flag;
+
+void* mLoop(void* args){
+
+}
+
 
 void b5::Loop(){
+  gStyle->SetPalette(1);
   TFile *myFile = new TFile("events.root","RECREATE");
   // TNtuple *ntuple = new TNtuple("ntuple","Events","x:y");
   TTree* mTree = new TTree("mTree","My Tree");
@@ -63,7 +71,7 @@ void b5::Loop(){
 
   Long64_t nbytes = 0, nb = 0;
   // for (Long64_t jentry=0; jentry<nentries-3;jentry++) {
-  for (Long64_t jentry=0; jentry<nentries-1;jentry++) {
+  for (Long64_t jentry=0; jentry<1;jentry++) {
   // for (Long64_t jentry=0; jentry<;jentry++) {
     printf("size: %lld\n",nentries);
     printf("\n\nLoop: %lld\n",jentry);
@@ -92,8 +100,8 @@ void b5::Loop(){
     std::vector<double> vpos_z;
     
 
-    // for (Long64_t gentry=jentry; gentry<jentry+3;gentry++) {
-    for (Long64_t gentry=jentry; gentry<jentry+1;gentry++) {
+    for (Long64_t gentry=jentry; gentry<jentry+3;gentry++) {
+    // for (Long64_t gentry=jentry; gentry<jentry+1;gentry++) {
       fChain->GetEntry(gentry);
       printf(":%f\n",InitAngle);
       initialAngle.push_back(InitAngle);
